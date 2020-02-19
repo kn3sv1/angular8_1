@@ -36,6 +36,9 @@ import { Component } from '@angular/core';
                 <br /><br />
                 https://metanit.com/web/angular2/2.6.php
                 <child-comp><h2>Добро пожаловать {{name}}!</h2></child-comp>
+
+                <child2-comp [userName]="name" [userAge]="age"></child2-comp>
+                User AGE: <input type="number" [(ngModel)]="age" />
                 `,
     //https://metanit.com/web/angular2/2.4.php
     styles: [` 
@@ -46,7 +49,9 @@ import { Component } from '@angular/core';
     `]
 })
 export class AppComponent { 
-    name= 'Tom';
+    name:string="Tom";
+    age:number = 24;
+
     colspan=2;
 
     red = "isredbox"
