@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-     
+
 @Component({
     selector: 'my-app',
     template: `<label>Введите имя:</label>
