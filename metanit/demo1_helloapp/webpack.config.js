@@ -4,7 +4,8 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         'polyfills': './src/polyfills.ts',
-        'app': './src/main.ts'
+        'app': './src/main.ts',
+        'app2': './src/main2.ts'
       },
    output:{
        path: path.resolve(__dirname, './public'),     // путь к каталогу выходных файлов - папка public
