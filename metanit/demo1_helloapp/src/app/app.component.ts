@@ -39,6 +39,29 @@ import { Component } from '@angular/core';
 
                 <child2-comp [userName]="name" [userAge]="age"></child2-comp>
                 User AGE: <input type="number" [(ngModel)]="age" />
+
+
+                <br /><br />
+                <h2>Количество кликов: {{clicks}}</h2>
+                <child3-comp (onChanged)="onChanged2($event)"></child3-comp>
+
+                <br /><br />
+                <child3-comp [(userName)]="name"></child3-comp>
+                <div>Выбранное имя: {{name}}</div>
+
+
+                <br /><br />
+                https://metanit.com/web/angular2/2.9.php
+                <p #userName>{{name}}</p>
+                RESULT of VARIABLE:
+                <p>{{userName.textContent}}</p>
+                <input type="text" [(ngModel)]="name" />
+
+                <br />Child4444 component variable:
+                <child4-comp #counter2></child4-comp>
+                <button (click)="counter2.increment()">+</button>
+                <button (click)="counter2.decrement()">-</button>
+                <br />
                 `,
     //https://metanit.com/web/angular2/2.4.php
     styles: [` 
@@ -74,5 +97,11 @@ export class AppComponent {
     count: number=0;
     increase() : void {
         this.count++;
+    }
+
+    //https://metanit.com/web/angular2/2.10.php
+    clicks:number = 0;
+    onChanged2(increased:any){
+        increased==true?this.clicks++:this.clicks--;
     }
 }

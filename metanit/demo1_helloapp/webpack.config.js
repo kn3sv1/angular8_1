@@ -5,7 +5,8 @@ module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'app': './src/main.ts',
-        'app2': './src/main2.ts'
+        'app2': './src/main2.ts',
+        'app_child': './src/mainchild.ts'
       },
    output:{
        path: path.resolve(__dirname, './public'),     // путь к каталогу выходных файлов - папка public
