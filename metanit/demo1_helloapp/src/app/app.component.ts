@@ -62,6 +62,12 @@ import { Component } from '@angular/core';
                 <button (click)="counter2.increment()">+</button>
                 <button (click)="counter2.decrement()">-</button>
                 <br />
+
+                <br />Взаимодействие между модулями: https://metanit.com/web/angular2/2.11.php
+                <div>
+                    <h1>AppModule</h1>
+                    <data-comp></data-comp>
+               </div>
                 `,
     //https://metanit.com/web/angular2/2.4.php
     styles: [` 
