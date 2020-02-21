@@ -1,5 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+
+//https://medium.com/a-beginners-guide-for-webpack-2/copy-all-images-files-to-a-folder-using-copy-webpack-plugin-7c8cf2de7676
+//http://localhost:8080/public/assets/user.json
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
     devtool: 'source-map',
     entry: {
@@ -33,6 +38,10 @@ module.exports = {
         /angular(\\|\/)core/,
         path.resolve(__dirname, 'src'), // каталог с исходными файлами
       {} // карта маршрутов
-    )
+    ),
+
+    new CopyWebpackPlugin([
+        {from:'src/assets',to:'assets'} 
+    ]),
   ]
 }
